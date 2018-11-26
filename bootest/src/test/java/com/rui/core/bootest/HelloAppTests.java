@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.rui.core.bootest.bean.Cat;
 import com.rui.core.bootest.bean.Person;
 
 /**
@@ -22,9 +23,17 @@ public class HelloAppTests {
 	@Autowired
 	private Person person;
 	
+	@Autowired
+	private Cat cat;
+	
 	@Test
 	public void contextLoads() {
 		System.out.println(person);
 	}
 
+	@Test
+	public void contextCat() {
+		System.out.println(cat);
+	}
+	
 }
