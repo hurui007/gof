@@ -2,6 +2,8 @@ package com.rui.core.bootest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -20,6 +22,9 @@ import com.rui.core.bootest.bean.Person;
 @SpringBootTest
 public class HelloAppTests {
 	
+	Logger logger = LoggerFactory.getLogger(getClass());
+	
+	
 	@Autowired
 	private Person person;
 	
@@ -34,6 +39,15 @@ public class HelloAppTests {
 	@Test
 	public void contextCat() {
 		System.out.println(cat);
+	}
+	
+	@Test
+	public void testLog() {
+		logger.trace("---logger -- trace---");
+		logger.debug("---logger--- debug ---");
+		logger.info("---logger --- info ---");
+		logger.warn("---logger --- warn --- ");
+		logger.error("---logger --- error --- ");
 	}
 	
 }
