@@ -1,4 +1,4 @@
-package com.rui.core.bootest.controller;
+package com.rui.core.bootest.controller.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
